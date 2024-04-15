@@ -1,0 +1,73 @@
+\documentclass{beamer}
+
+\usepackage{iftex}
+
+\iftutex
+% For LuaTeX or XeTeX Use Google's
+% OpenType Noto fonts for typesetting
+% Russian text
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures={TeX}}
+\setmainfont{Noto Serif}
+\setsansfont{Noto Sans}
+\setmonofont{Noto Sans Mono}
+
+\else
+% For pdfTeX we must use old
+% 8-bit font technologies
+\usepackage[T2A]{fontenc}
+\fi
+
+% Hyphenation rules
+\usepackage{hyphenat}
+\usepackage[english, russian]{babel}
+
+% More styles for bullets
+\usepackage{pifont}
+
+% Using listings to highlight code
+\usepackage{listings}
+
+% Information to be included in the title page:
+\title{
+    Современное предприятие в концепции Индустрии 5.0
+    \ifdefined\tagversion
+        \newline
+        \newline
+        v\tagversion
+    \fi}
+\author{Таберко В.~В., Иванюк Д.~С., Ситковец Я.~С.}
+\institute{Савушкин продукт}
+\date{\today}
+
+% TikZ is probably the most complex and powerful tool to create graphic elements in LaTeX.
+\usepackage{tikz}
+
+\addtobeamertemplate{navigation symbols}{}{%
+    \usebeamerfont{footline}%
+    \usebeamercolor[fg]{footline}%
+    \hspace{1em}%
+    \insertframenumber/\inserttotalframenumber
+}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}
+    \frametitle{Содержание}
+    \tableofcontents
+\end{frame}
+
+\section{Введение}
+ {
+  \begin{frame}
+      \frametitle{Индустрия 5.0}
+
+      {\Large \textbf{Индустрия 5.0}} -- уже сегодня!?
+
+      -- Да!
+  \end{frame}
+ }
+
+\end{document}
