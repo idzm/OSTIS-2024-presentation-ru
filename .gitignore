@@ -1,2 +1,15 @@
 .vscode/
 out/
+
+.DS_Store
+
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.nav
+*.snm
+*.gz
+*.toc
+*.pdf
